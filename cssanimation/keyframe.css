@@ -1,0 +1,115 @@
+.timing {
+  padding-top: 50px;
+}
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 2s infinite; /* animation-name animation duration: how much it take to complete one cycle and animation -iteration-count: till when it will animate*/
+  box-shadow: 10px 10px 10px yellow;
+}
+
+/* keyframe,animation name,animation-duration,
+    posiiton,animation*/
+@keyframes bounce {
+  0% {
+    top: 0px;
+    transform: translateY(
+      0
+    ); /* reposition an element vertically along y-axis by zero distance from its originla calculated position*/
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.timing-ball {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  position: relative;
+  animation: timing 2s infinite; /* animation-name animation duration: how much it take to complete one cycle and animation -iteration-count: till when it will animate*/
+  box-shadow: 10px 10px 10px yellow;
+  animation-timing-function: step-end;
+}
+
+@keyframes timing {
+  0% {
+    top: 0px;
+    transform: translateY(
+      0
+    ); /* reposition an element vertically along y-axis by zero distance from its originla calculated position*/
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.delay-ball {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  position: relative;
+  animation: timing 2s infinite; /* animation-name animation duration: how much it take to complete one cycle and animation -iteration-count: till when it will animate*/
+  box-shadow: 10px 10px 10px yellow;
+  animation-delay: 2s; /*it define the movement will start when you reload the page it will 2sec and then it start to move*/
+}
+
+.iteration-ball {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  position: relative;
+  animation: timing 2s 2s; /* animation-name animation duration: how much it take to complete one cycle and animation -iteration-count: till when it will animate*/
+  box-shadow: 10px 10px 10px yellow;
+  animation-delay: 2s; /*it define the movement will start when you reload the page it will 2sec and then it start to move*/
+}
+
+.direction-ball {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  position: relative;
+  animation: slidebox 2s infinite; /* animation-name animation duration: how much it take to complete one cycle and animation -iteration-count: till when it will animate*/
+  box-shadow: 10px 10px 10px yellow;
+  animation-direction: reverse;
+  animation-delay: 2s; /*it define the movement will start when you reload the page it will 2sec and then it start to move*/
+}
+
+@keyframes slidebox {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+.fill-mode-ball {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  position: relative;
+  animation: slidebox 2s infinite backwards; /* animation-name animation duration: how much it take to complete one cycle and animation -iteration-count: till when it will animate*/
+  box-shadow: 10px 10px 10px yellow;
+  /*animation-fill-mode: it specify how a css animation apply styles to its traget beofre and after its excution*/
+}

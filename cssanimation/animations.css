@@ -1,0 +1,106 @@
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  border: 2px solid yellow;
+  border-radius: 20px;
+  box-shadow: 20px 20px 20px yellow;
+}
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@keyframes stretching {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+.first {
+  animation-name: stretching;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.button button {
+  padding: 10pcx 20px;
+  font-size: medium;
+  background-color: black;
+  color: white;
+  border: 2px solid yellow;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px yellow;
+  animation-name: stretching;
+  animation-duration: 2s;
+}
+
+@keyframes bouncing {
+  0% {
+    bottom: 0;
+    box-shadow: 0 0 5px yellow;
+  }
+  100% {
+    bottom: 50px;
+    box-shadow: 0 50px 50px yellow;
+  }
+}
+
+.bouncing button {
+  height: 50px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  border: 2px solid yellow;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation: bouncing 1s cubic-bezier(0.1, 0.25, 0.1, 1) infinite alternate both;
+}
+
+@keyframes around {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 240px;
+    top: 0;
+  }
+  50% {
+    left: 240px;
+    top: 140px;
+  }
+  75% {
+    left: 0px;
+    top: 140px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+.around {
+  animation: around 4s linear infinite;
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  position: absolute;
+}
+
+.around-container {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 2px solid black;
+}
